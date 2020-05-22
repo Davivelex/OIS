@@ -17,6 +17,7 @@ int main(int argc, char** argv) {
 	}
 	
 	for(int p=0; p<P; p++) {
+		int k = C;
 		for(int i=0; i<N; i++) {
 			if(i == 0 && H[i] != 0 && H[i] > H[i+1]) {
 				H[0] = 0;
@@ -32,8 +33,9 @@ int main(int argc, char** argv) {
 				i++;
 			}
 		}
+		if(k == C) break;
 	}
 	
-	cout << C;
+	cout << C << endl;
 	return 0;
 }
