@@ -1,4 +1,4 @@
-## Lista sottoposizione
+## Lista sottoposizioni
 | Problema      | Punti         |
 |:--------------|:-------------:|
 | ransomware    | 100/100       |
