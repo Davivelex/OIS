@@ -7,3 +7,4 @@
 | collatz           | 0/100         |
 | pcollatz          | 0/100         |
 | disuguaglianze    | 0/100         |
+| semiprimo         | 100/100       |
