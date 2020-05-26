@@ -8,3 +8,4 @@
 | pcollatz          | 0/100         |
 | disuguaglianze    | 0/100         |
 | semiprimo         | 100/100       |
+| spartizione       | 0/100         |
