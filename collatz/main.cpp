@@ -17,8 +17,9 @@ int collatz(int n) {
 
 int main() {
     freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+
     cin >> N;
-    
     cout << collatz(N) << endl;
     return 0;
 }

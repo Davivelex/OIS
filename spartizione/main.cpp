@@ -6,6 +6,8 @@ int P, G, T=0;
 
 int main() {
     freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+
     cin >> P >> G;
 
     for(int i=1; P > 0; i++) {

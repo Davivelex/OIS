@@ -18,7 +18,9 @@ bool primo(long x) {
 }
  
 int main() {    
-	freopen("input.txt", "r", stdin); 
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+	 
 	cin >> N;		
 	
     if(primo(N))			

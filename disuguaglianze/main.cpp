@@ -7,6 +7,7 @@ string S;
 
 int main() {
     freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
 
     cin >> N >> S;
     int min = 1, max = N;
