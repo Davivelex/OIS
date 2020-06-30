@@ -11,5 +11,6 @@
 | spartizione       | 100/100       |
 | grandprix         | 100/100       |
 | lwf               | 100/100       |
+| turni             | 100/100       |
 
-Average: 95/100
+Average: 95.46/100
