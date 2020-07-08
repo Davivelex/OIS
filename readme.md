@@ -12,5 +12,7 @@
 | grandprix         | 100/100       |
 | lwf               | 100/100       |
 | turni             | 100/100       |
+| ois_rainstorm     | 0/100         |
+| poldo             | 100/100       |
 
-Average: 95.46/100
+Average: 88.46/100
