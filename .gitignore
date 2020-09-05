@@ -1,8 +1,0 @@
-*.o
-*.out
-*.win
-*.dev
-*.exe
-*.layout
-output.txt
-.vscode/
