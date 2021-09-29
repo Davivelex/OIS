@@ -17,11 +17,12 @@
 | canoa             | 100/100       |
 | ois_delivery      | 100/100       |
 | ois_lootboxes     | 65/100        |
+| ois_restaurants   | 100/100       |
 
 ## Statistics
 | Stats                     | Value |
 |:-------------------------:|:-----:|
-| Total Problems            | 16    |
+| Total Problems            | 17    |
 | Partial Solved Problems   | 2     |
-| Solved Problems           | 13    |
-| Average Score             | 88.44 |
+| Solved Problems           | 14    |
+| Average Score             | 89.12 |
