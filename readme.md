@@ -15,5 +15,10 @@
 | ois_rainstorm     | 0/100         |
 | poldo             | 100/100       |
 | canoa             | 100/100       |
+| ois_delivery      | 100/100       |
 
-Average: 89.28/100
+## Statistics
+| Total Problems            | 15    |
+| Partial Solved Problems   | 1     |
+| Solved Problems           | 13    |
+| Average Score             | 90.00 |
