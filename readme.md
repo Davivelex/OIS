@@ -16,11 +16,12 @@
 | poldo             | 100/100       |
 | canoa             | 100/100       |
 | ois_delivery      | 100/100       |
+| ois_lootboxes     | 65/100        |
 
 ## Statistics
 | Stats                     | Value |
 |:-------------------------:|:-----:|
-| Total Problems            | 15    |
-| Partial Solved Problems   | 1     |
+| Total Problems            | 16    |
+| Partial Solved Problems   | 2     |
 | Solved Problems           | 13    |
-| Average Score             | 90.00 |
+| Average Score             | 88.44 |
