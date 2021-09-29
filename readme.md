@@ -18,6 +18,8 @@
 | ois_delivery      | 100/100       |
 
 ## Statistics
+| Stats                     | Value |
+|:-------------------------:|:-----:|
 | Total Problems            | 15    |
 | Partial Solved Problems   | 1     |
 | Solved Problems           | 13    |
