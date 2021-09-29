@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
 		codes[input] = i;
 	}
 	
-	for(auto number : numbers) { // Al più di 100 iterazioni
+	for(auto number : numbers) { // Al piu' di 100 iterazioni
 		int p = 0, i = 0;
 		
 		while(p + i < number.length()) { // n iterazioni
