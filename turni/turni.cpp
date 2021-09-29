@@ -11,7 +11,7 @@ int main() {
 	int N, K;
 	cin >> K >> N;
 	
-	vector <pair<int,int> > guardia(N);
+	vector <pair<int,int>> guardia(N);
 	vector <bool> giorni(K, false);
 	for(int i=0; i < N; ++i){
 		cin >> guardia[i].first >> guardia[i].second;
