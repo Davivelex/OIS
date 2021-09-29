@@ -18,11 +18,12 @@
 | ois_delivery      | 100/100       |
 | ois_lootboxes     | 65/100        |
 | ois_restaurants   | 100/100       |
+| ois_23            | 65/100        |
 
 ## Statistics
 | Stats                     | Value |
 |:-------------------------:|:-----:|
-| Total Problems            | 17    |
-| Partial Solved Problems   | 2     |
+| Total Problems            | 18    |
+| Partial Solved Problems   | 3     |
 | Solved Problems           | 14    |
-| Average Score             | 89.12 |
+| Average Score             | 87.78 |
