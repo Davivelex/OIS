@@ -20,7 +20,8 @@ int main() {
 
     for(i=N-2; i>=0; i--) {
         for(j=i+1; j<N; j++) {
-            if(panini[i] > panini[j] && risultati[i] <= risultati[j]) risultati[i] = risultati[j] + 1;
+            if(panini[i] > panini[j] && risultati[i] <= risultati[j])
+                risultati[i] = risultati[j] + 1;
         }
     }
 

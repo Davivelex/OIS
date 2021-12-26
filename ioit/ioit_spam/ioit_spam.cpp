@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
 	}
 	
 	cin >> E;
-	for(int i=0; i<E; i++) { // Al più di 1000 iterazioni
+	for(int i=0; i<E; i++) { // Al piu' di 1000 iterazioni
 		bool is_bad = false;
 		bool is_good = false;
 
