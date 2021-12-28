@@ -1,0 +1,41 @@
+{
+    "contest": "OIS2022",
+    "round": "round02",
+    "tasks": [
+        {
+            "name": "ois_beta",
+            "point": 100,
+            "difficulty": 1
+        },
+        {
+            "name": "ois_christmasballs",
+            "point": 58,
+            "difficulty": 5
+        },
+        {
+            "name": "ois_disks2",
+            "point": 40,
+            "difficulty": 1
+        },
+        {
+            "name": "ois_kalindrome",
+            "point": 100,
+            "difficulty": 2
+        },
+        {
+            "name": "ois_pickup",
+            "point": 20,
+            "difficulty": 3
+        },
+        {
+            "name": "ois_police5",
+            "point": 0,
+            "difficulty": 4
+        },
+        {
+            "name": "ois_stocks",
+            "point": 100,
+            "difficulty": 2
+        }
+    ]
+}

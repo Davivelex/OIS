@@ -39,7 +39,7 @@ int solve() {
 
     current->next = limit;
 
-    for (node *i = current; i != limit; i = i->prev) {
+    for(node *i = current; i != limit; i = i->prev) {
         if (is_quantum(i)) return 1;
         if (i->next != limit && i->value == i->next->value) cut(i);
     }

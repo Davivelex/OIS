@@ -16,7 +16,7 @@ int main() {
     }
 
     for(int i=0; i<N-1; i++) {
-        if (24 - B[i] + A[i] >= T) {
+        if (24 - B[i] + A[i+1] >= T) {
             cout << i;
             return 0;
         }
