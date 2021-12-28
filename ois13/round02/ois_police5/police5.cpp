@@ -32,17 +32,19 @@ void dijktra(int start) {
         int node = visit.top();
         visit.pop();
 
+        if (node == N - 1) break;
+
+        if (visited[node]) continue;
+        visited[node] = true;
+
         for(arc next : graph[node]) {
-            //cout << distances[next.from] + next.cost << endl;
-            if (next.explode != 1 || distances[next.from] + next.cost <= T) {
+            if (!next.explode || distances[next.from] + next.cost <= T) {
                 if (distances[next.from] + next.cost < distances[next.to]) {
                     distances[next.to] = distances[next.from] + next.cost;
+                    visit.push(next.to);
                 }
-                if(!visited[next.to]) visit.push(next.to);
-            } else if(!visited[next.to]) visit.push(next.to);
+            }
         }
-
-        visited[node] = true;
     }
 }
 
