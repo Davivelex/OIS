@@ -1,19 +1,7 @@
-/*  +----------------------------------------------+
-    |              Dijkstra Algorithm              |
-    +----------------------------------------------+
-    | This algorithm is useful for calculating the |
-    | path with the least cost on graphs with both |
-    | mono and bidirectional weighted arcs. It is  |
-    | also possible to obtain the tree of minimum  |
-    | paths and therefore the cheapest path.       |
-    +----------------------------------------------+
-    |                       @Davide Leva, Dec 2021 |
-    +----------------------------------------------+
-*/
-
 #include <iostream>
 #include <queue>
 
+#define INF INT64_MAX
 #define MAXN 10000
 
 using namespace std;
@@ -31,10 +19,8 @@ struct order {
 };
 
 vector<vector<arc>> graph(MAXN, vector<arc>());
-//priority_queue<int, vector<int>, order> visit;
-queue<int> visit;
+priority_queue<int, vector<int>, order> visit;
 vector<bool> visited(MAXN, false);
-vector<int> prec(MAXN, -1);
 
 int N, M, T, A, B, C, E;
 
@@ -43,19 +29,17 @@ void dijktra(int start) {
     distances[start] = 0;
 
     while(!visit.empty()) {
-        int node = visit.front();
+        int node = visit.top();
         visit.pop();
 
         for(arc next : graph[node]) {
-            if (distances[next.from] + next.cost < distances[next.to]) {
-                if (distances[next.from] + next.cost >= T) {
-                    visit.push(next.from);
-                    continue;
+            //cout << distances[next.from] + next.cost << endl;
+            if (next.explode != 1 || distances[next.from] + next.cost <= T) {
+                if (distances[next.from] + next.cost < distances[next.to]) {
+                    distances[next.to] = distances[next.from] + next.cost;
                 }
-                distances[next.to] = distances[next.from] + next.cost;
-                prec[next.to] = next.from;
-            }
-            visit.push(next.to);
+                if(!visited[next.to]) visit.push(next.to);
+            } else if(!visited[next.to]) visit.push(next.to);
         }
 
         visited[node] = true;
@@ -74,5 +58,7 @@ int main() {
 
     dijktra(0);
     
-    cout << distances[N-1] << endl;
+    if (distances[N-1] == INF) {
+        cout << -1 << endl;
+    } else cout << distances[N-1] << endl;
 }
