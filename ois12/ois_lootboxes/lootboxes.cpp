@@ -2,19 +2,19 @@
 #include <vector>
 #include <algorithm>
 
-#define MAXN 5000
-#define MAXX 10000
+#define MAXN 5001
+#define MAXX 10001
 
 using namespace std;
 
 typedef struct lootbox_t {
     int prob, cost;
-} Lootbox;
+} lootbox;
 
 int N, Q, P=0;
 int p, q;
-int memo[MAXN][MAXX];
-vector<Lootbox> lootboxes;
+vector<int> prec(MAXX, 0), memo(MAXX, 0);
+vector<lootbox> lootboxes;
 
 int main() {
     freopen("input.txt", "r", stdin);
@@ -26,19 +26,20 @@ int main() {
         lootboxes.push_back({p, q});
     }
 
-    for (int i = 0; i <= N; i++) {
+    for (int i = 1; i <= N; i++) {
         for (int c = 0; c <= Q; c++) {
-            if (i == 0 || c == 0) {
-                memo[i][c] = 0;
+            if (c == 0) {
+                memo[c] = 0;
                 continue;
             }
 
-            if (lootboxes[i-1].cost > c) memo[i][c] = memo[i-1][c];
-            else memo[i][c] = max(lootboxes[i-1].prob + memo[i-1][c-lootboxes[i-1].cost], memo[i-1][c]);
+            if (lootboxes[i-1].cost > c) memo[c] = prec[c];
+            else memo[c] = max(lootboxes[i-1].prob + prec[c-lootboxes[i-1].cost], prec[c]);
         }
+        prec = memo;
     }
 
-    cout << memo[N][Q] << endl;
+    cout << memo[Q] << endl;
 
     return 0;
 }

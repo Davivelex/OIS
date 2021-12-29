@@ -10,12 +10,12 @@ vector<int> V;
 void evadi(int Q, vector<int> &N) {
     for(int k=0; k<N.size(); k++) {
         int count = 0;
-        for(int i=1; i<(Q-1)/2; i++) {
-            for(int j=1; j<(Q-1)/2; j++) {
-                if (i+j+__gcd(i, j) == Q) count++;
+        for(int i=1; i<N[k]; i++) {
+            for(int j=1; j<N[k]; j++) {
+                if (i+j+__gcd(i, j) == N[k]) count++;
             }
         }
-        N[k] = count*2;
+        N[k] = count;
     }    
 }
 
@@ -29,6 +29,8 @@ int main() {
     }
 
     evadi(Q, V);
+
+    cout << V[1];
 
     return 0;
 }

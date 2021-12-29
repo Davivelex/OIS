@@ -16,10 +16,13 @@ int moves[4][2] = {{1,0}, {-1, 0}, {0, 1}, {0, -1}};
 
 // usare bfs
 void dfs(int i, int j, int k) {
+    if (seen[{i, j}]) return;
     if (i < 0 || j < 0 || i > R || j > C) return;
-    if (i == 0 || j == 0 || i == R-1 || j == C-1) border[k] = true;
+    if (i == 0 || j == 0 || i == R-1 || j == C-1) {
+        border[k] = true;
+    };
 
-    cout << "BFS " << i << " " << j << endl;
+    //cout << "BFS " << i << " " << j << endl;
 
     seen[{i, j}] = true;
 

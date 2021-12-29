@@ -36,6 +36,9 @@ void dijktra(ii start) {
         ii node = visit.top();
         visit.pop();
 
+        if (visited[node]) continue;
+        visited[node] = true;
+
         for (ii move : moves) {
             ii next = {node.first + move.first, node.second + move.second};
 
@@ -48,11 +51,9 @@ void dijktra(ii start) {
             if (dist[next] > dist[node] + weigth) {
                 dist[next] = dist[node] + weigth;
                 dir[next] = move;
-                if (!visited[next]) visit.push(next);
+                visit.push(next);
             }
         }
-
-        visited[node] = true;
     }
 }
 
