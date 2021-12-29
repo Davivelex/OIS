@@ -1,7 +1,7 @@
 #include <iostream>
 #include <algorithm>
 
-#define MAXN 100
+#define MAXN 5001
 #define INF 2000000000
 
 using namespace std;
@@ -12,7 +12,7 @@ int memo[MAXN];
 
 int main() {
     freopen("input.txt", "r", stdin);
-    //freopen("output.txt", "w", stdout);
+    freopen("output.txt", "w", stdout);
     
     cin >> N >> K;
 
