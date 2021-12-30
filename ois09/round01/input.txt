@@ -1,0 +1,7 @@
+3 3
+turin aac
+milan aaa
+psg aab
+milan psg 1 1
+turin milan 1 1
+turin psg 1 1
