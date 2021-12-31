@@ -4,22 +4,24 @@
 using namespace std;
 
 int N;
-long long A, B;
+long long n, m;
 
 int main() {
     freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
 
     cin >> N;
     for(int i=0; i<N; i++) {
-        cin >> A >> B;
+        cin >> n >> m;
 
-        if (A*B <= 0) cout << 0;
-        else {
-            if (A > 0 && B > 0) cout << "+";
-            else {
-                if ((abs(A)-abs(B))%2==0) cout << "-";
-                else cout << "+";
-            }
+        if (n > 0 && m > 0) {
+            cout << "+" << endl;
+        } else if (n < 0 && m < 0) {
+            if ((m - n) % 2 == 0) {
+                cout << "-" << endl;
+            } else cout << "+" << endl;
+        } else if ((n <= 0 && m >= 0) || (n >= 0 && m <= 0)) {
+            cout << "0" << endl;
         }
     }
 

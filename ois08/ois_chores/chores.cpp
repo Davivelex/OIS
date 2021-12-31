@@ -9,22 +9,33 @@ using namespace std;
 
 int N, A, B;
 vector<vector<int>> graph(MAXN, vector<int>());
-vector<bool> visited(MAXN, false);
-vector<int> dist(MAXN, 0);
 
-int dfs(int node) {
-    if (visited[node]) return dist[node];
-    visited[node] = true;
+pair<int, int> bfs(int start) {
+    vector<bool> visited(MAXN, false);
+    vector<int> dist(MAXN, 0);
+    queue<int> q;
 
-    int max_road = 0;
-    for (int next : graph[node]) {
-        if (dist[next] == 0) dist[next] = dist[node] + 1; 
-        max_road = max(max_road, dfs(next));
+    visited[start] = true;
+    dist[start] = 0;
+    q.push(start);
+
+    int furthest = start;
+
+    while(!q.empty()) {
+        int node = q.front();
+        q.pop();
+
+        for(int next : graph[node]) {
+            if (visited[next]) continue;
+            visited[next] = true;
+            dist[next] = dist[node] + 1;
+            if (dist[next] > dist[furthest]) furthest = next; 
+            q.push(next);
+        }
     }
 
-    return max_road;
+    return {furthest, dist[furthest]};
 }
-
 
 int main() {
     freopen("input.txt", "r", stdin);
@@ -36,9 +47,7 @@ int main() {
         graph[B].push_back(A);
     }
 
-    cout << dfs(0);
-
-    cout << dist[6];
+    cout << bfs(bfs(0).first).second*2;
 
     return 0;
 }
