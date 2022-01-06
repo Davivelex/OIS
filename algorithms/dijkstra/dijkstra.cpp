@@ -41,21 +41,18 @@ void dijktra(int start) {
 
     while(!visit.empty()) {
         int node = visit.top();
-        
         visit.pop();
+
+        if (!visited[node]) visited[node] = true;
 
         for(arc next : graph[node]) {
             if (distances[next.from] + next.cost < distances[next.to]) {
                 distances[next.to] = distances[next.from] + next.cost;
                 prec[next.to] = next.from;
-
-                if (!visited[next.to]) {
-                    visit.push(next.to);
-                }
+                visit.push(next.to);
             }
         }
 
-        visited[node] = true;
     }
 }
 
@@ -74,7 +71,6 @@ int main() {
     }
 
     dijktra(F);
-    
     cout << distances[T] << endl;
 
     // Minimum path (reverse)

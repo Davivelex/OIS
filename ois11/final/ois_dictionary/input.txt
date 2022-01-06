@@ -1,0 +1,6 @@
+767
+4
+a 3 b c d
+f g
+g h b
+h a
